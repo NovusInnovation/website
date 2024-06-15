@@ -4,7 +4,10 @@
     import { setLanguageTag, languageTag, onSetLanguageTag, isAvailableLanguageTag } from "$lib/paraglide/runtime.js"
 	import { onMount } from "svelte";
 
+    let currentLang = languageTag();
+
     onSetLanguageTag((tag) => {
+        currentLang = tag;
         // Reroute to the correct language
         let currentPath = window.location.pathname;
         // Only remove the language tag if it is present
@@ -22,10 +25,10 @@
 </script>
 
 <div>
-    <div class="flex items-center gap-8 text-navigation">
+    <div class="flex items-center gap-2 text-navigation">
         <button on:click={() => setLanguageTag('en')}>EN</button>
-        <button on:click={() => setLanguageTag(languageTag() == 'dk' ? 'en' : 'dk')} aria-label="Toggle language" class="h-15 w-30 rounded-full border border-light-border dark:border-dark-border">
-            <div class="relative -top-1 -left-1 h-15 w-15 rounded-full bg-black transition-transform duration-100 ease-out dark:bg-white transform translate-x-0"></div>
+        <button on:click={() => setLanguageTag(languageTag() == 'dk' ? 'en' : 'dk')} aria-label="Toggle language" class="w-8 h-4 rounded-full border">
+            <div class={"relative h-[15px] w-[15px] rounded-full bg-black transition-transform duration-1000 ease-out dark:bg-white transform" + (currentLang === 'dk' ? ' translate-x-full' : ' translate-x-0')} />
         </button>
         <button on:click={() => setLanguageTag('dk')}>DK</button>
     </div>
