@@ -7,9 +7,9 @@
 
     <nav class="w-screen sticky top-0 px-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <div class="flex ">
+            <div>
                 <a href="/">
-                    <img src="novusfull.png" alt="Logo" class="w-30 h-14" />
+                    <img src="novusfull.png" alt="Logo" class="w-30 h-14 mt-1" />
                 </a>
             </div>
             <ul class="flex flex-row mt-4 gap-3 items-center">
