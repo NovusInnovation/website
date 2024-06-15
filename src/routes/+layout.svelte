@@ -11,7 +11,7 @@
 <ModeWatcher />
 
 <ParaglideJS {i18n}>
-    <main class="min-h-screen bg-gray-100 dark:bg-gray-800 w-screen items-center justify-center">
+    <main class="min-h-screen bg-background w-screen items-center justify-center">
         <Header />
         <div class="max-w-screen-xl mx-auto">
             <slot></slot>
