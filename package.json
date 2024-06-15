@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "deploy": "npm run build && wrangler pages deploy",
     "cf-typegen": "wrangler types && mv worker-configuration.d.ts src/",
-    "postbuild": "npx svelte-sitemap --domain https://novusgroup.dk/"
+    "postbuild": "npx svelte-sitemap --out-dir .svelte-kit/cloudflare --domain https://novusgroup.dk/ --debug"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240605.0",
