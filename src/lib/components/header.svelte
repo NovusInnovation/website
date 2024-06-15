@@ -10,7 +10,7 @@
             <ul class="flex flex-row mt-4 gap-3">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">Om os</a></li>
-                <li><a href="/blog">Blog</a></li>
+                <li><a href="/projects">Projekter</a></li>
                 <li><a href="/contact">Kontakt</a></li>
             </ul>
         </div>
