@@ -1,6 +1,7 @@
 <script>
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit'
 	import { i18n } from '$lib/i18n'
+    import { ModeWatcher } from 'mode-watcher';
 
 	import Footer from "$lib/components/footer.svelte";
 	import Header from "$lib/components/header.svelte";

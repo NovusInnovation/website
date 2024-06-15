@@ -1,8 +1,9 @@
 <script lang="ts">
     import * as m from '$lib/paraglide/messages';
+	import ModeSwitcher from './mode-switcher.svelte';
 </script>
 
-<header class="bg-gray-200" style="min-height: 7vh;">
+<header class="" style="min-height: 7vh;">
 
     <nav class="w-screen sticky top-0 px-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
@@ -11,11 +12,12 @@
                     <img src="novusfull.png" alt="Logo" class="w-30 h-14" />
                 </a>
             </div>
-            <ul class="flex flex-row mt-4 gap-3">
+            <ul class="flex flex-row mt-4 gap-3 items-center">
                 <li><a href="/">{ m.navbar_home() }</a></li>
                 <li><a href="/about">{ m.navbar_about() }</a></li>
                 <li><a href="/projects">{ m.navbar_projects() }</a></li>
                 <li><a href="/contact">{ m.navbar_contact()}</a></li>
+                <ModeSwitcher />
             </ul>
         </div>
     </nav>
