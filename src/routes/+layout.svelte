@@ -6,6 +6,8 @@
 
 <main class="min-h-screen">
     <Header />
-    <slot></slot>
+    <div class="max-w-screen-xl px-12 items-center">
+        <slot></slot>
+    </div>
     <Footer />
 </main>

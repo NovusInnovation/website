@@ -1,10 +1,10 @@
 
 <header>
     <nav class="w-screen sticky top-0 px-4">
-        <div class="flex flex-wrap items-center justify-between mt-auto max-w-screen-xl">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <div class="flex ">
                 <a href="/">
-                    <img src="/favicon.png" alt="Logo" class="w-16 h-16" />
+                    <img src="/favicon.png" alt="Logo" class="w-14 h-14" />
                 </a>
             </div>
             <ul class="flex flex-row mt-4 gap-3">
