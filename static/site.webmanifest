@@ -1,0 +1,43 @@
+{
+    "short_name": "Novus",
+    "name": "Novus Group",
+    "description": "We are a collective of 4 developers dedicated to shaping the technology of the future.",
+    "icons": [
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose":"any"
+      },
+      {
+        "src": "maskable_icon.png",
+        "type": "image/png",
+        "sizes": "853x853",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "maskable_icon_x128.png",
+        "type": "image/png",
+        "sizes": "128x128",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "maskable_icon_x384.png",
+        "type": "image/png",
+        "sizes": "384x384",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "maskable_icon_x512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "https://novusgroup.dk/",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "display": "browser",
+    "orientation": "portrait-primary",
+    "categories": [""]
+  }
