@@ -8,8 +8,10 @@
     import '../app.css';
 </script>
 
+<ModeWatcher />
+
 <ParaglideJS {i18n}>
-    <main class="min-h-screen">
+    <main class="min-h-screen bg-gray-100 dark:bg-gray-800">
         <Header />
         <div class="max-w-screen-xl px-12 items-center">
             <slot></slot>
