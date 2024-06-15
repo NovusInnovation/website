@@ -10,7 +10,8 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint .",
     "deploy": "npm run build && wrangler pages deploy",
-    "cf-typegen": "wrangler types && mv worker-configuration.d.ts src/"
+    "cf-typegen": "wrangler types && mv worker-configuration.d.ts src/",
+    "postbuild": "npx svelte-sitemap --domain https://novusgroup.dk/"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240605.0",
@@ -26,6 +27,7 @@
     "prettier-plugin-svelte": "^3.1.2",
     "svelte": "^4.2.7",
     "svelte-check": "^3.6.0",
+    "svelte-sitemap": "^2.6.0",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.0.0-alpha.20",
