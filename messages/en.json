@@ -12,7 +12,7 @@
     "last_name": "Last name",
     "email": "Email",
     "message": "Message",
-    "message_confirm": "Tak for din henvendelse. Vi vender tilbage hurtigst muligt.",
-    "message_confirm_title": "Din besked er blevet sendt.",
+    "message_confirm": "Thanks for your inquiry. We will get back to you as soon as possible.",
+    "message_confirm_title": "Your message was sent.",
     "rights_reserved": "All Rights Reserved"
 }
