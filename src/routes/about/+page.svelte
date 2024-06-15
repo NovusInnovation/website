@@ -1,1 +1,1 @@
-About us
+Welcome to Novus Group. We are a collective of developers dedicated to shaping the technology of the future. We have developed several technical solutions and won various awards. Together, we build complete end-to-end solutions. Our solutions range from web development to mobile applications and video games.
