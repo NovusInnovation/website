@@ -1,1 +1,1 @@
-How to contact us
+Email: hey@novusgroup.dk
