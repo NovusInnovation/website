@@ -1,3 +1,9 @@
 {
-    "$schema": "https://inlang.com/schema/inlang-message-format"
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "navbar": {
+        "about": "Om os",
+        "contact": "Kontakt",
+        "home": "Home",
+        "projects": "Projekter"
+    }
 }
