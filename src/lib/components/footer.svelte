@@ -32,7 +32,7 @@
 		</div>
 		<hr class="my-6 sm:mx-auto lg:my-8" />
 		<span class="block text-sm sm:text-center"
-			>© {year} <a href="/" class="hover:underline">Novus Group™</a>. All Rights Reserved.</span
+			>© {year} <a href="/" class="hover:underline">Novus Group™</a>. {m.rights_reserved()}.</span
 		>
 	</div>
 </footer>
