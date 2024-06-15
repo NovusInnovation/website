@@ -1,8 +1,10 @@
 {
     "$schema": "https://inlang.com/schema/inlang-message-format",
-
     "navbar_about": "About",
     "navbar_contact": "Contact",
     "navbar_home": "Home",
-    "navbar_projects": "Projects"
+    "navbar_projects": "Projects",
+    "contact_us": "Contact us",
+    "contact_send_message": "Send message",
+    "about_us_expanded": "Do you have any questions or feedback? Don't hesitate to contact us! We will do our best to respond to your inquiry as soon as possible."
 }
