@@ -11,10 +11,10 @@
                 </a>
             </div>
             <ul class="flex flex-row mt-4 gap-3">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">{ m.navbar_home }</a></li>
                 <li><a href="/about">{ m.navbar_about() }</a></li>
                 <li><a href="/projects">{ m.navbar_projects() }</a></li>
-                <li><a href="/contact">Kontakt</a></li>
+                <li><a href="/contact">{ m.navbar_contact}</a></li>
             </ul>
         </div>
     </nav>
