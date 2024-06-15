@@ -7,5 +7,12 @@
     "contact_us": "Contact us",
     "contact_send_message": "Send message",
     "about_us_expanded": "Do you have any questions or feedback? Don't hesitate to contact us! We will do our best to respond to your inquiry as soon as possible.",
-    "welcome": "Welcome to Novus Group"
+    "welcome": "Welcome to Novus Group",
+    "first_name": "First name",
+    "last_name": "Last name",
+    "email": "Email",
+    "message": "Message",
+    "message_confirm": "Tak for din henvendelse. Vi vender tilbage hurtigst muligt.",
+    "message_confirm_title": "Din besked er blevet sendt.",
+    "rights_reserved": "All Rights Reserved"
 }

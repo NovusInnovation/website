@@ -6,5 +6,11 @@
     "navbar_projects": "Projekter",
     "contact_us": "Kontakt os",
     "contact_send_message": "Send besked",
-    "about_us_expanded": "Har du spørgsmål, ris eller ros? Så tøv ikke med at kontakte os! Vi vil gøre vores bedste for at besvare din henvendelse hurtigst muligt."
+    "about_us_expanded": "Har du spørgsmål, ris eller ros? Så tøv ikke med at kontakte os! Vi vil gøre vores bedste for at besvare din henvendelse hurtigst muligt.",
+    "welcome": "Velkommen til Novus Group",
+    "first_name": "Fornavn",
+    "last_name": "Efternavn",
+    "email": "Email",
+    "message": "Besked",
+    "rights_reserved": "Alle rettigheder forbeholdt"
 }
