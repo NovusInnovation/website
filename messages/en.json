@@ -1,10 +1,8 @@
 {
     "$schema": "https://inlang.com/schema/inlang-message-format",
 
-    "navbar": {
-        "about": "About",
-        "contact": "Contact",
-        "home": "Home",
-        "projects": "Projects"
-    }
+    "navbar_about": "About",
+    "navbar_contact": "Contact",
+    "navbar_home": "Home",
+    "navbar_projects": "Projects"
 }
