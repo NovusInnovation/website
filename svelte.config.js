@@ -21,6 +21,9 @@ const config = {
 			$utils: './src/utils',
 			"@/*": "./path/to/lib/*",
 		},
+		prerender: {
+			origin: 'https://novusgroup.dk',
+		}
 	}
 };
 

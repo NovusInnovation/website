@@ -1,5 +1,6 @@
 <script lang="ts">
     import * as m from '$lib/paraglide/messages';
+	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import ModeSwitcher from './mode-switcher.svelte';
 </script>
 
@@ -17,6 +18,7 @@
                 <li><a href="/projects">{ m.navbar_projects() }</a></li>
                 <li><a href="/contact">{ m.navbar_contact()}</a></li>
                 <ModeSwitcher />
+                <LanguageSwitcher />
             </ul>
         </div>
     </nav>
