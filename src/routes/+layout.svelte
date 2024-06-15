@@ -11,9 +11,9 @@
 <ModeWatcher />
 
 <ParaglideJS {i18n}>
-    <main class="min-h-screen w-screen flex flex-col justify-between">
+    <main class="min-h-screen w-screen flex flex-col">
         <Header />
-        <div class="max-w-screen-xl mx-auto min-h-48">
+        <div class="max-w-screen-xl mx-auto flex-1 px-24">
             <slot />
         </div>
         <Footer />
