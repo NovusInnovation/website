@@ -4,7 +4,9 @@
 	import { onMount } from "svelte";
 
     onMount(() => {
-        goto("/");
+        setTimeout(() => {
+            goto("/");
+        }, 5000);
     });
 </script>
 
