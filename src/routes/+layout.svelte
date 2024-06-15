@@ -13,6 +13,8 @@
         <div class="max-w-screen-xl px-12 items-center">
             <slot></slot>
         </div>
-        <Footer />
+        <div class="w-screen absolute bottom-0">
+            <Footer />
+        </div>
     </main>
 </ParaglideJS>

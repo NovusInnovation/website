@@ -18,7 +18,8 @@ const config = {
 			$lib: './src/lib',
 			$stores: './src/stores',
 			$styles: './src/styles',
-			$utils: './src/utils'
+			$utils: './src/utils',
+			"@/*": "./path/to/lib/*",
 		},
 	}
 };
