@@ -25,7 +25,7 @@
 </script>
 
 <div>
-    <div class="flex items-center gap-2 text-navigation px-2">
+    <div class="flex items-center gap-2 text-navigation">
         <button on:click={() => setLanguageTag('en')}>EN</button>
         <button on:click={() => setLanguageTag(languageTag() == 'dk' ? 'en' : 'dk')} aria-label="Toggle language" class="w-8 h-4 rounded-full border">
             <div class={"relative h-[15px] w-[15px] rounded-full bg-black transition-transform duration-1000 ease-out dark:bg-white transform" + (currentLang === 'dk' ? ' translate-x-full' : ' translate-x-0')} />
