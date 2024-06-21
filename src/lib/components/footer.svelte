@@ -18,9 +18,9 @@
 				<li>
 					<a href="/about" class="hover:underline me-4 md:me-6">{m.navbar_about()}</a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="/projects" class="hover:underline me-4 md:me-6">{m.navbar_projects()}</a>
-				</li>
+				</li> -->
 				<li>
 					<a href="/contact" class="hover:underline">{m.navbar_contact()}</a>
 				</li>

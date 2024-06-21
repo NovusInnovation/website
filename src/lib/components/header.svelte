@@ -15,7 +15,7 @@
 			<ul class="flex flex-row mt-4 gap-5 items-center">
 				<li><a href="/">{m.navbar_home()}</a></li>
 				<li><a href="/about">{m.navbar_about()}</a></li>
-				<li><a href="/projects">{m.navbar_projects()}</a></li>
+				<!-- <li><a href="/projects">{m.navbar_projects()}</a></li> -->
 				<li><a href="/contact">{m.navbar_contact()}</a></li>
 				<ThemeSwitcher />
 				<LanguageSwitcher />
