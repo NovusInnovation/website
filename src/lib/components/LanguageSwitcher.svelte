@@ -18,7 +18,6 @@
 		// Only remove the language tag if it is present
 		let currentPathNoLang = currentPath.replace(/\/(en|dk)/, '');
 		let newRouteWithLang = i18n.resolveRoute(currentPathNoLang, tag);
-		console.log(newRouteWithLang);
 		if (newRouteWithLang !== window.location.pathname) {
 			goto(newRouteWithLang);
 		}
