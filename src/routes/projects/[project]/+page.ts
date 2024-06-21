@@ -19,4 +19,3 @@ export async function load({ params, depends }) {
         return error(404, 'Not found');
     }
 }
-
