@@ -7,4 +7,4 @@ short_description: heyheyhey
 ---
 
 # Nørrebro skakklub
-længere description arh
+lAUHDUAIDH
