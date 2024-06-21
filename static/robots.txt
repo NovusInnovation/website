@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akademia.cc/sitemap.xml
+Sitemap: https://novusgroup.dk/sitemap.xml
