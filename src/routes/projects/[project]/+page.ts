@@ -1,14 +1,14 @@
 import { error } from '@sveltejs/kit';
+import { languageTag } from '$lib/paraglide/runtime.js';
 
-export async function load({ params }) {
-	const project = params.project;
-    console.log('project:', project);
+export async function load({ params, depends }) {
+    const project = params.project;
+    depends("paraglide:lang");
 
     try {
-        const data = (await import(/* @vite-ignore */'../../../lib/projects/' + project + '.md'));
+        const lang = languageTag();
+        const data = (await import(/* @vite-ignore */'../../../lib/projects/' + project + "_" + lang + '.md'));
         const metadata = data.metadata;
-        console.log('data:', data);
-        console.log('metadata:', metadata);
 
         return {
             content: data.default,
