@@ -19,3 +19,5 @@ export async function load({ params }) {
         return error(404, 'Not found');
     }
 }
+
+export const prerender = true;

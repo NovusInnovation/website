@@ -5,5 +5,5 @@
 
 <main>
     <h1>{data.title}</h1>
-    <p>Page {data.content}</p>
+    <svelte:component this={data.content} />
 </main>
