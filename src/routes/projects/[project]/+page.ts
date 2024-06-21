@@ -7,7 +7,7 @@ export async function load({ params, depends }) {
 
     try {
         const lang = languageTag();
-        const data = (await import(/* @vite-ignore */'../../../lib/projects/' + project + "_" + lang + '.md'));
+        const data = (await import('../../../lib/projects/' + project + "_" + lang + '.md'));
         const metadata = data.metadata;
 
         return {
