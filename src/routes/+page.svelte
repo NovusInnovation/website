@@ -18,13 +18,15 @@
 	content="Novus Group is a software development company that specializes in web development, mobile development, and custom software solutions."
 />
 
-<div class="items-center flex px-auto justify-center pt-12">
+<div class="absolute rounded-[100rem]"></div>
+<div class="flex max-h-[75vh] h-[80vw] items-center mb-60">
 	<h1
-		class="max-w-[30rem] md:max-w-full md:text-red-500 md:text-5xl md:whitespace-nowrap lg:text-6xl text-4x sm:text-5xl align-middle text-center"
+		class="max-w-[30rem] md:max-w-full md:whitespace-nowrap md:text-5xl text-4xl align-middle text-center"
 	>
 		<span>The team that’s Ready</span>
 		<br class="hidden md:block" />
 		to build <span class="italic">your</span> next
-		<span> Website </span>
+		<span class="gradient"> Website </span>
 	</h1>
 </div>
+<div class="items-center flex-1 flex px-auto justify-center pt-12"></div>

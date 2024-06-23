@@ -5,7 +5,7 @@
 </script>
 
 <header class="" style="min-height: 7vh;">
-	<nav class="w-screen sticky top-0 px-4">
+	<nav class="sticky top-0 px-4">
 		<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
 			<div>
 				<a href="/">
