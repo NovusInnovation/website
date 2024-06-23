@@ -1,14 +1,16 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { crossfade, fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+
+	import { receive, send } from '$lib/crossfade';
 
 	let showLogo = false;
 
 	onMount(() => {
 		setTimeout(() => {
 			showLogo = true;
-		}, 250);
+		}, 1000);
 	});
 </script>
 
@@ -19,16 +21,15 @@
 />
 
 <div class="container items-center flex px-auto justify-center pt-12">
-	{#if showLogo}
+	<div>
 		<img
 			src="/novusfull.png"
 			alt="NovusGroup Logo"
+			class="absolute"
 			width="400"
 			height="400"
-			in:fly={{
-				y: 100,
-				easing: backOut
-			}}
+			in:receive={{ key: 'novus-logo' }}
+			out:send={{ key: 'novus-logo' }}
 		/>
-	{/if}
+	</div>
 </div>
