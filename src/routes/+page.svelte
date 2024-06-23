@@ -39,28 +39,8 @@
 			const currentText = elem?.firstChild?.children[i] as HTMLElement;
 
 			elem!.style.width = `${currentText.clientWidth}px`;
-
-			console.log('hi');
-			replaceChars(whatWeDo[i % whatWeDo.length], 0);
 		}, 3000);
 	});
-
-	let text = 'Website';
-
-	function replaceChars(str: string, index) {
-		if (text[index] === undefined && str[index] === undefined) {
-			return;
-		}
-		text = replaceAt(text, index, str[index] || '   ');
-
-		setTimeout(() => {
-			replaceChars(str, index + 1);
-		}, 100);
-	}
-
-	function replaceAt(str: string, index: number, replacement: string) {
-		return str.substring(0, index) + replacement + str.substring(index + replacement.length);
-	}
 
 	onDestroy(() => {
 		clearInterval(interval);
