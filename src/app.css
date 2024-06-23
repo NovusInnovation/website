@@ -54,6 +54,7 @@
 		--input: 0 0% 14.9%;
 
 		--primary: 209 100% 56%;
+		--primary-2: 295 100% 56%;
 		--primary-foreground: 0 0% 90%;
 
 		--secondary: 0 0% 14.9%;
@@ -70,7 +71,7 @@
 }
 
 .gradient {
-	background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(295deg 100% 56%) 100%);
+	background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--primary-2)) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
