@@ -33,7 +33,7 @@
 </div>
 
 <Dialog.Root bind:open onOpenChange={onOpenChange}>
-  <Dialog.Content class="sm:max-w-[425px]">
+  <Dialog.Content class="w-full max-w-[80vw] h-full max-h-[75vh]">
     <slot />
   </Dialog.Content>
 </Dialog.Root>
