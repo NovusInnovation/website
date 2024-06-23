@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	let showLogo = false;
 
@@ -16,6 +16,7 @@
 	let bgGlowElem1: HTMLDivElement | null = null;
 	let bgGlowElem2: HTMLDivElement | null = null;
 
+	let interval: ReturnType<typeof setInterval>;
 	onMount(() => {
 		document.onscroll = () => {
 			if (perspectiveElem) {
@@ -28,7 +29,37 @@
 				bgGlowElem2.style.translate = `0 ${-window.scrollY * 0.6}px`;
 			}
 		};
+		clearInterval(interval);
+		let i = 0;
+		interval = setInterval(() => {
+			i++;
+			console.log('hi');
+			replaceChars(whatWeDo[i % whatWeDo.length], 0);
+		}, 2000);
 	});
+
+	let text = 'Website';
+
+	function replaceChars(str: string, index) {
+		if (text[index] === undefined && str[index] === undefined) {
+			return;
+		}
+		text = replaceAt(text, index, str[index] || '   ');
+
+		setTimeout(() => {
+			replaceChars(str, index + 1);
+		}, 100);
+	}
+
+	function replaceAt(str: string, index: number, replacement: string) {
+		return str.substring(0, index) + replacement + str.substring(index + replacement.length);
+	}
+
+	onDestroy(() => {
+		clearInterval(interval);
+	});
+
+	const whatWeDo = ['Website', 'App', 'Software', 'Design'];
 </script>
 
 <title>Novus Group</title>
@@ -36,7 +67,7 @@
 	name="description"
 	content="Novus Group is a software development company that specializes in web development, mobile development, and custom software solutions."
 />
-<div class="size-full overflow-x-clip fixed left-0 top-0 -z-10 pointer-events-none">
+<div class="size-full fixed left-0 top-0 -z-10 pointer-events-none">
 	<div
 		class="blur-effect bg-primary-2 right-0 bottom-0 translate-x-[54%] translate-y-[54%]"
 		bind:this={bgGlowElem2}
@@ -56,7 +87,7 @@
 			<span>The team that’s Ready</span>
 			<br class="hidden md:block" />
 			to build <span class="italic">your</span> next
-			<span class="gradient"> Website </span>
+			<span class="gradient inline-block w-[15rem] overflow-[inline] text-left"> {text} </span>
 			<img
 				src="svg/elliott-bubble.svg"
 				alt="Elliott Bubble"
