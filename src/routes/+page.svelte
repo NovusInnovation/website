@@ -16,6 +16,8 @@
 	let bgGlowElem1: HTMLDivElement | null = null;
 	let bgGlowElem2: HTMLDivElement | null = null;
 
+	let i = 0;
+
 	let interval: ReturnType<typeof setInterval>;
 	onMount(() => {
 		document.onscroll = () => {
@@ -30,12 +32,17 @@
 			}
 		};
 		clearInterval(interval);
-		let i = 0;
 		interval = setInterval(() => {
-			i++;
+			i = (i + 1) % whatWeDo.length;
+
+			const elem = document.getElementById('whatWeDo');
+			const currentText = elem?.firstChild?.children[i] as HTMLElement;
+
+			elem!.style.width = `${currentText.clientWidth}px`;
+
 			console.log('hi');
 			replaceChars(whatWeDo[i % whatWeDo.length], 0);
-		}, 2000);
+		}, 3000);
 	});
 
 	let text = 'Website';
@@ -81,13 +88,26 @@
 <div class="relative">
 	<div class="flex max-h-[75vh] h-[80vw] items-center mb-60">
 		<h1
-			class="cont-3d max-w-[30rem] relative md:max-w-full md:whitespace-nowrap sm:text-3xl md:text-5xl lg:text-6xl text-4xl align-middle text-center !leading-[1.5em]"
+			class="cont-3d max-w-[30rem] relative md:max-w-full md:whitespace-nowrap sm:text-3xl md:text-5xl lg:text-6xl text-4xl align-middle text-center !leading-[1.5em] md:w-[13em]"
 			bind:this={perspectiveElem}
 		>
 			<span>The team that’s Ready</span>
 			<br class="hidden md:block" />
 			to build <span class="italic">your</span> next
-			<span class="gradient inline-block w-[15rem] overflow-[inline] text-left"> {text} </span>
+			<span
+				class="inline-block overflow-y-clip translate-y-[20%] h-[1.1em] w-[15rem] text-left transition-all ease-in-out duration-1000"
+				id="whatWeDo"
+			>
+				<div
+					style="translate: 0px {-(100 / 4) * i - 3}%"
+					class="transition-all ease-in-out duration-300 flex flex-col items-start"
+				>
+					{#each whatWeDo as t}
+						<span class="inline-block z-10 gradient">{t}</span>
+						<!-- content here -->
+					{/each}
+				</div>
+			</span>
 			<img
 				src="svg/elliott-bubble.svg"
 				alt="Elliott Bubble"
