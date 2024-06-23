@@ -86,6 +86,10 @@
 	}
 }
 
+* {
+	cursor: none !important;
+}
+
 body,
 html {
 	font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

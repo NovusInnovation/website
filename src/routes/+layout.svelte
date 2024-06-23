@@ -5,6 +5,7 @@
 
 	import Footer from '$lib/components/footer.svelte';
 	import Header from '$lib/components/header.svelte';
+	import Cursor from '$lib/components/cursor.svelte';
 	import '../app.css';
 	import { fly } from 'svelte/transition';
 
@@ -20,6 +21,7 @@
 </script>
 
 <ModeWatcher />
+<Cursor />
 
 <ParaglideJS {i18n}>
 	<main class="min-h-screen flex flex-col">
