@@ -27,7 +27,13 @@
 		<h1
 			class="max-w-[30rem] relative md:max-w-full md:whitespace-nowrap md:text-5xl text-4xl align-middle text-center"
 		>
-			<div class="bg-red-500/20 size-full absolute"></div>
+			<div class="bg-red-500/20 size-full absolute">
+				<img
+					src="svg/elliott-bubble.svg"
+					alt="Elliott Bubble"
+					class="w-30 h-14 mt-1 opacity-100 transition-opacity duration-1000 ease-out"
+				/>
+			</div>
 			<span>The team that’s Ready</span>
 			<br class="hidden md:block" />
 			to build <span class="italic">your</span> next
