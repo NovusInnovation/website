@@ -4,7 +4,10 @@
 
 	let size = 20;
 	let color = $mode == 'dark' ? 'white' : 'black';
-	let mixBlendMode = 'multiply';
+	$: color = $mode == 'dark' ? 'white' : 'black';
+	let mixBlendMode = 'none';
+
+	$: console.log(color);
 
 	let x = -100;
 	let y = -100;
@@ -43,7 +46,7 @@
 <style>
 	.custom-cursor {
 		--background-color: 'black';
-		--mix-blend-mode: 'multiply';
+		--mix-blend-mode: 'none';
 		--size: 20;
 		background-color: var(--background-color);
 		mix-blend-mode: var(--mix-blend-mode);
