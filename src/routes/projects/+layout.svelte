@@ -3,6 +3,7 @@
   import { page } from "$app/stores";
   import { i18n } from '$lib/i18n.js'
   import { goto } from '$app/navigation'
+	import { m } from "$lib";
 
   let open = $page.route.id !== '/projects';
   page.subscribe((value) => {
@@ -15,6 +16,8 @@
     }
   }
 </script>
+
+<title>{m.navbar_projects()} | Novus</title>
 
 <div class="container mx-auto p-4">
 	<h1 class="text-3xl font-bold mb-4">Our projects:</h1>
