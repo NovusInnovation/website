@@ -5,9 +5,9 @@
   import { goto } from '$app/navigation'
 	import { m } from "$lib";
 
-  let open = $page.route.id !== '/projects';
+  let open = $page.route.id?.includes('/projects/');
   page.subscribe((value) => {
-    open = value.route.id !== '/projects';
+    open = $page.route.id?.includes('/projects/');
   });
 
   function onOpenChange(isOpen: boolean) {
