@@ -61,7 +61,9 @@
 		border-radius: 50%;
 		pointer-events: none;
 		z-index: 99999;
-		transition: all 0.2s cubic-bezier(0.28, 0.8, 0.36, 1);
+		transition-property: height, width;
+		transition-duration: 0.2s;
+		transition-timing-function: cubic-bezier(0.28, 0.8, 0.36, 1);
 		cursor: none;
 	}
 </style>
