@@ -1,0 +1,21 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"navbar_about": "Über uns",
+	"navbar_contact": "Kontakt",
+	"navbar_home": "Startseite",
+	"navbar_projects": "Projekte",
+	"contact_us": "Kontaktieren Sie uns",
+	"contact_send_message": "Nachricht senden",
+	"about_us_expanded": "Haben Sie Fragen oder Feedback? Zögern Sie nicht, uns zu kontaktieren! Wir werden unser Bestes tun, um so schnell wie möglich auf Ihre Anfrage zu antworten.",
+	"welcome": "Willkommen bei Novus Group",
+	"first_name": "Vorname",
+	"last_name": "Nachname",
+	"email": "E-Mail",
+	"message": "Nachricht",
+	"message_confirm": "Vielen Dank für Ihre Anfrage. Wir werden uns so bald wie möglich bei Ihnen melden.",
+	"message_confirm_title": "Ihre Nachricht wurde gesendet.",
+	"rights_reserved": "Alle Rechte  vorbehalten",
+	"landing1": "Wir sind das Team",
+	"landing2": "für <span class='italic'>Ihre</span> nächste",
+	"about_us": "Wir sind eine Gruppe von 4 Entwicklern, die sich der Gestaltung der Technologie der Zukunft verschrieben haben. Wir haben mehrere technische Lösungen entwickelt und verschiedene Preise gewonnen. Gemeinsam bauen wir komplette End-to-End-Lösungen. Unsere Lösungen reichen von Webentwicklung über mobile Anwendungen bis hin zu Videospielen."
+}

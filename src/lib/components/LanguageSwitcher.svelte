@@ -16,7 +16,7 @@
 		// Reroute to the correct language
 		let currentPath = window.location.pathname;
 		// Only remove the language tag if it is present
-		let currentPathNoLang = currentPath.replace(/\/(en|dk)/, '');
+		let currentPathNoLang = currentPath.replace(/\/(en|dk|de)/, '');
 		let newRouteWithLang = i18n.resolveRoute(currentPathNoLang, tag);
 		if (newRouteWithLang !== window.location.pathname) {
 			goto(newRouteWithLang);
