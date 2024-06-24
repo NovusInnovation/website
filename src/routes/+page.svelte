@@ -108,7 +108,7 @@
 
 <style>
 	.blur-effect {
-		@apply absolute rounded-[100%] w-[80vw] h-[60vh] blur-[calc(6rem+10vw)] opacity-70;
+		@apply absolute rounded-[100%] w-[80vw] h-[60vh] blur-[calc(6rem+10vw)] opacity-45;
 	}
 
 	.profile-bubble {
