@@ -8,3 +8,5 @@
         <p class="mt-4 text-lg">{m.about_us()}</p>
     </div>
 </div>
+
+<title>{m.navbar_about()} | Novus</title>
