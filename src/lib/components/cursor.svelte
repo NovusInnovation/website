@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, tick } from 'svelte';
+	import { onMount } from 'svelte';
 	import { mode } from 'mode-watcher';
 	import { onSetLanguageTag } from '$lib/paraglide/runtime';
 
@@ -16,8 +16,7 @@
 	let x = -100;
 	let y = -100;
 
-	const cx = size / 2;
-	const cy = size / 2;
+	let elem: HTMLDivElement | null = null;
 
 	onMount(() => {
 		document
@@ -26,6 +25,12 @@
 			document.onmousemove = (e) => {
 				x = e.clientX;
 				y = e.clientY;
+
+				if (elem) {
+					elem.style.left = `${x}px`;
+					elem.style.top = `${y}px`;
+					elem.style.setProperty('--size', `${size}px`);
+				}
 			};
 			document.onmouseover = (e) => {
 				if ((e.target as HTMLElement).classList.contains('hoverable') || (e.target as HTMLElement).tagName === 'A' || (e.target as HTMLElement).tagName === 'BUTTON'){
@@ -43,7 +48,8 @@
 
 <div
 	class="custom-cursor opacity-75 -translate-x-[50%] -translate-y-[50%]"
-	style="left: {x}px; top: {y}px;--size:{size}px; --mix-blend-mode: {mixBlendMode}; --background-color: {color}"
+	style="--mix-blend-mode: {mixBlendMode}; --background-color: {color}"
+	bind:this={elem}
 />
 
 <style>
