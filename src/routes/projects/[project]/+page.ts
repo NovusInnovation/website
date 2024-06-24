@@ -7,7 +7,12 @@ export async function load({ params, depends }) {
 
 	try {
 		const lang = languageTag();
-		const data = await import(`../../../lib/projects/${project}_${lang}.md`);
+		let data;
+		try {
+			data = await import(`../../../lib/projects/${project}_${lang}.md`);
+		} catch {
+			data = await import(`../../../lib/projects/${project}_en.md`);
+		}
 		const metadata = data.metadata;
 
 		return {
