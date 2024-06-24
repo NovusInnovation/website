@@ -16,8 +16,6 @@
 	"message_confirm_title": "Din besked er blevet sendt.",
 	"rights_reserved": "Alle rettigheder forbeholdt",
 	"about_us": "Vi er en gruppe på 4 udviklere dedikeret til at forme fremtidens teknologi. Vi har udviklet flere tekniske løsninger og vundet forskellige priser. Sammen bygger vi komplette end-to-end løsninger. Vores løsninger spænder fra webudvikling til mobilapplikationer og videospil.",
-	"landing1": "Teamet, der er klar til at",
-	"landing2": "udvikle",
-	"landing3": "jeres",
-	"landing4": "næste"
+	"landing1": "Teamet bag <span class='italic'>jeres</span>",
+	"landing2": "næste innovative"
 }

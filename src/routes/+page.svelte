@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-	import { backOut } from 'svelte/easing';
 	import { onDestroy, onMount } from 'svelte';
 	import { m } from '$lib';
 
@@ -85,9 +83,9 @@
 				style="translate: 0 0 -100px;"
 			/>
 
-			<span>{m.landing1()}</span>
+			<span>{@html m.landing1()}</span>
 			<br class="hidden md:block" />
-			{m.landing2()} <span class="italic">{m.landing3()}</span> {m.landing4()}
+			{@html m.landing2()}
 			<span
 				class="inline-block overflow-y-clip translate-y-[20%] h-[1.1em] w-[15rem] text-left transition-all ease-in-out duration-1000"
 				id="whatWeDo"

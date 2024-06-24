@@ -16,8 +16,6 @@
     "message_confirm_title": "Your message was sent.",
     "rights_reserved": "All Rights Reserved",
     "landing1": "The team that’s Ready",
-	"landing2": "to build",
-	"landing3": "your",
-	"landing4": "next",
+	"landing2": "to build <span class='italic'>your</span> next",
     "about_us": "We are a collective of 4 developers dedicated to shaping the technology of the future. We have developed several technical solutions and won various awards. Together, we build complete end-to-end solutions. Our solutions range from web development to mobile applications and video games."
 }
