@@ -71,6 +71,19 @@
 			class="cont-3d max-w-[30rem] relative md:max-w-full md:whitespace-nowrap sm:text-3xl md:text-5xl lg:text-6xl text-4xl align-middle text-center !leading-[1.5em] md:w-[13em]"
 			bind:this={perspectiveElem}
 		>
+			<img
+				src="svg/elliott-bubble.svg"
+				alt="Elliott Bubble"
+				class="h-[3.8em] right-0 bottom-0 translate-x-[62%] translate-y-[80%] profile-bubble"
+				style="translate: 0 0 125px;"
+			/>
+			<img
+				src="svg/jonathan-bubble.svg"
+				alt="Jonathan Bubble"
+				class="h-[4em] left-0 top-0 -translate-x-[70%] -translate-y-[70%] profile-bubble"
+				style="translate: 0 0 -100px;"
+			/>
+
 			<span>The team that’s Ready</span>
 			<br class="hidden md:block" />
 			to build <span class="italic">your</span> next
@@ -89,18 +102,6 @@
 					{/each}
 				</div>
 			</span>
-			<img
-				src="svg/elliott-bubble.svg"
-				alt="Elliott Bubble"
-				class="h-[3.8em] right-0 bottom-0 translate-x-[62%] translate-y-[80%] profile-bubble"
-				style="translate: 0 0 125px;"
-			/>
-			<img
-				src="svg/jonathan-bubble.svg"
-				alt="Jonathan Bubble"
-				class="h-[4em] left-0 top-0 -translate-x-[70%] -translate-y-[70%] profile-bubble"
-				style="translate: 0 0 -100px;"
-			/>
 		</h1>
 	</div>
 	<div class="items-center flex-1 flex px-auto justify-center pt-12"></div>
