@@ -75,12 +75,14 @@
 				alt="Elliott Bubble"
 				class="hidden sm:block h-[3.8em] right-0 bottom-0 translate-x-[62%] translate-y-[80%] profile-bubble"
 				style="translate: 0 0 125px;"
+				data-cursor-text="Elliott F."
 			/>
 			<img
 				src="svg/jonathan-bubble.svg"
 				alt="Jonathan Bubble"
 				class="hidden sm:block h-[4em] left-0 top-0 -translate-x-[70%] -translate-y-[70%] profile-bubble"
 				style="translate: 0 0 -100px;"
+				data-cursor-text="Jonathan B."
 			/>
 
 			<span>{@html m.landing1()}</span>
@@ -96,7 +98,7 @@
 					class="transition-all ease-in-out duration-300 flex flex-col items-start"
 				>
 					{#each whatWeDo as t}
-						<span class="inline-block z-10 gradient">{t}</span>
+						<span class="inline-block z-10 gradient" data-cursor-text="What We Do">{t}</span>
 						<!-- content here -->
 					{/each}
 				</div>
