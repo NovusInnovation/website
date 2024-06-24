@@ -1,11 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { mode } from 'mode-watcher';
+	import { onSetLanguageTag } from '$lib/paraglide/runtime';
 
 	let size = 20;
 	let color = $mode == 'dark' ? 'white' : 'black';
 	$: color = $mode == 'dark' ? 'white' : 'black';
 	let mixBlendMode = 'none';
+	let isBig = false;
+
+	$: size = isBig ? 35 : 20;
 
 	$: console.log(color);
 
@@ -15,8 +19,10 @@
 	let elem: HTMLDivElement | null = null;
 
 	onMount(() => {
+		document
+		isBig = false;
 		const initCursor = () => {
-			document.addEventListener('mousemove', (e) => {
+			document.onmousemove = (e) => {
 				x = e.clientX;
 				y = e.clientY;
 
@@ -25,17 +31,15 @@
 					elem.style.top = `${y}px`;
 					elem.style.setProperty('--size', `${size}px`);
 				}
-			});
-			const hoverables = document.querySelectorAll('.hoverable, a, button');
-			hoverables.forEach((hoverable) => {
-				hoverable.addEventListener('mouseenter', () => {
-					size += 15;
+			};
+			document.onmouseover = (e) => {
+				if ((e.target as HTMLElement).classList.contains('hoverable') || (e.target as HTMLElement).tagName === 'A' || (e.target as HTMLElement).tagName === 'BUTTON'){
+					isBig = true;
 					document.body.style.cursor = 'none';
-				});
-				hoverable.addEventListener('mouseleave', () => {
-					size -= 15;
-				});
-			});
+				} else {
+					isBig = false;
+				}
+			};
 		};
 
 		initCursor();
