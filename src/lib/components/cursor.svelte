@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { mode } from 'mode-watcher';
 
@@ -12,14 +12,19 @@
 	let x = -100;
 	let y = -100;
 
-	const cx = size / 2;
-	const cy = size / 2;
+	let elem: HTMLDivElement | null = null;
 
 	onMount(() => {
 		const initCursor = () => {
 			document.addEventListener('mousemove', (e) => {
 				x = e.clientX;
 				y = e.clientY;
+
+				if (elem) {
+					elem.style.left = `${x}px`;
+					elem.style.top = `${y}px`;
+					elem.style.setProperty('--size', `${size}px`);
+				}
 			});
 			const hoverables = document.querySelectorAll('.hoverable, a, button');
 			hoverables.forEach((hoverable) => {
@@ -39,7 +44,8 @@
 
 <div
 	class="custom-cursor opacity-75 -translate-x-[50%] -translate-y-[50%]"
-	style="left: {x}px; top: {y}px;--size:{size}px; --mix-blend-mode: {mixBlendMode}; --background-color: {color}"
+	style="--mix-blend-mode: {mixBlendMode}; --background-color: {color}"
+	bind:this={elem}
 />
 
 <style>
