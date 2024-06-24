@@ -38,9 +38,8 @@
 </script>
 
 <div
-	class="custom-cursor opacity-75"
-	style="left: {x - cx}px; top: {y -
-		cy}px;--size:{size}px; --mix-blend-mode: {mixBlendMode}; --background-color: {color}"
+	class="custom-cursor opacity-75 -translate-x-[50%] -translate-y-[50%]"
+	style="left: {x}px; top: {y}px;--size:{size}px; --mix-blend-mode: {mixBlendMode}; --background-color: {color}"
 />
 
 <style>
