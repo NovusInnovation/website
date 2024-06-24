@@ -77,6 +77,7 @@
 			<span
 				class="inline-block overflow-y-clip translate-y-[20%] h-[1.1em] w-[15rem] text-left transition-all ease-in-out duration-1000"
 				id="whatWeDo"
+				style="overflow-inline: clip;"
 			>
 				<div
 					style="translate: 0px {-(100 / 4) * i - 3}%"
