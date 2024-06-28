@@ -84,6 +84,13 @@
 				style="translate: 0 0 -100px;"
 				data-cursor-text="Jonathan B."
 			/>
+			<img
+				src="svg/johannes-bubble.svg"
+				alt="Johannes Bubble"
+				class="hidden sm:block h-[4em] left-0 top-0 -translate-x-[10%] -translate-y-[-70%] profile-bubble"
+				style="translate: 0 0 0px;"
+				data-cursor-text="Johannes B."
+			/>
 
 			<span>{@html m.landing1()}</span>
 			<br class="hidden md:block" />
