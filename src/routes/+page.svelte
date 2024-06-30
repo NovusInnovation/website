@@ -84,11 +84,18 @@
 				style="translate: 0 0 -100px;"
 				data-cursor-text="Jonathan B."
 			/>
+			<!-- <img
+				src="svg/johannes-bubble.svg"
+				alt="Johannes Bubble"
+				class="hidden sm:block h-[4em] left-[60%] top-0 -translate-x-[50%] -translate-y-[100%] profile-bubble"
+				style="translate: 0 0 -50px;"
+				data-cursor-text="Johannes B."
+			/> -->
 			<img
 				src="svg/johannes-bubble.svg"
 				alt="Johannes Bubble"
-				class="hidden sm:block h-[4em] left-0 top-0 -translate-x-[10%] -translate-y-[-70%] profile-bubble"
-				style="translate: 0 0 0px;"
+				class="hidden sm:block h-[4em] left-[20%] bottom-0 -translate-x-[0] translate-y-[80%] profile-bubble"
+				style="translate: 0 0 -40px;"
 				data-cursor-text="Johannes B."
 			/>
 

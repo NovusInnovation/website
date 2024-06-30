@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { mode } from 'mode-watcher';
 	import { onSetLanguageTag } from '$lib/paraglide/runtime';
+	import type { HtmlTag } from 'svelte/compiler';
 
 	let size = 20;
 	let color = $mode == 'dark' ? 'white' : 'black';
@@ -61,18 +62,23 @@
 
 	let cursorText = 'Hello';
 	let showText = false;
+	let innerElem: HTMLParagraphElement;
 </script>
 
 <div
-	class="custom-cursor opacity-75 -translate-x-[50%] -translate-y-[50%] flex items-center px-2 {showText
+	class="custom-cursor flex bg-foreground/90 opacity-70 items-center {showText
 		? 'text-background'
 		: 'text-transparent'}"
-	style="--mix-blend-mode: {mixBlendMode}; --background-color: {color}; {showText
-		? 'max-width: 8rem'
-		: ''};"
+	style="--mix-blend-mode: {mixBlendMode}; --background-color: {color}; {showText && cursorText
+		? 'width: ' + innerElem.clientWidth + 'px;'
+		: 'width: var(--size)'};"
 	bind:this={elem}
 >
-	{cursorText || ''}
+	<div class="px-2" bind:this={innerElem}>
+		<p>
+			{cursorText || ''}
+		</p>
+	</div>
 </div>
 
 <style>
@@ -81,16 +87,18 @@
 		--background-color: 'black';
 		--mix-blend-mode: 'none';
 		--size: 20;
-		background-color: var(--background-color);
-		mix-blend-mode: var(--mix-blend-mode);
-		width: auto;
-		max-width: var(--size);
+		/* background-color: white; */
+		/* mix-blend-mode: difference; */
+		/* mix-blend-mode: exclusion; */
+
+		/* max-width: var(--size); */
+		transform: translate(calc(var(--size) * -0.5), -50%);
 		height: var(--size);
 		position: fixed;
 		border-radius: 100px;
 		pointer-events: none;
 		z-index: 99999;
-		transition-property: height, width, max-width;
+		transition-property: height, width, max-width, transform;
 		transition-duration: 0.4s;
 		transition-timing-function: cubic-bezier(0.28, 0.8, 0.36, 1);
 		cursor: none;
