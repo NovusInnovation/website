@@ -1,27 +1,25 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { mode } from 'mode-watcher';
-	import { onSetLanguageTag } from '$lib/paraglide/runtime';
-	import type { HtmlTag } from 'svelte/compiler';
 
-	let size = 20;
+	let size = 0;
 	let color = $mode == 'dark' ? 'white' : 'black';
 	$: color = $mode == 'dark' ? 'white' : 'black';
 	let mixBlendMode = 'none';
-	let isBig = false;
-
-	$: size = isBig ? 35 : 20;
 
 	$: console.log(color);
 
 	let x = -100;
 	let y = -100;
 
+	$: elem?.style.setProperty('--size', `${size}px`);
+
 	let elem: HTMLDivElement | null = null;
 
 	onMount(() => {
-		document;
-		isBig = false;
+		console.log();
+
+		size = 0;
 		const initCursor = () => {
 			document.onmousemove = (e) => {
 				x = e.clientX;
@@ -30,7 +28,8 @@
 				if (elem) {
 					elem.style.left = `${x}px`;
 					elem.style.top = `${y}px`;
-					elem.style.setProperty('--size', `${size}px`);
+
+					elem?.style.setProperty('--size', `${size}px`);
 				}
 			};
 			document.onmouseover = (e) => {
@@ -40,21 +39,28 @@
 					(e.target as HTMLElement).tagName === 'A' ||
 					(e.target as HTMLElement).tagName === 'BUTTON'
 				) {
-					isBig = true;
+					size = 35;
 					document.body.style.cursor = 'none';
 				} else {
-					isBig = false;
+					size = 20;
 				}
 				const ct = t.getAttribute('data-cursor-text');
 				if (ct) {
 					cursorText = ct;
 					showText = true;
-					isBig = true;
+					size = 35;
 				} else if (showText) {
 					showText = false;
-					isBig = false;
+					size = 20;
 				}
 			};
+		};
+
+		document.onmouseleave = () => {
+			if (elem) elem.style.display = 'none';
+		};
+		document.onmouseenter = () => {
+			if (elem) elem.style.display = 'block';
 		};
 
 		initCursor();
@@ -86,7 +92,7 @@
 		overflow: hidden;
 		--background-color: 'black';
 		--mix-blend-mode: 'none';
-		--size: 20;
+		--size: 0;
 		/* background-color: white; */
 		/* mix-blend-mode: difference; */
 		/* mix-blend-mode: exclusion; */
