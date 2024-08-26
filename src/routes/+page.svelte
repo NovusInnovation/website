@@ -107,12 +107,15 @@
 				id="whatWeDo"
 				style="overflow-inline: clip;"
 			>
+				<br class="xs:hidden" />
 				<div
 					style="translate: 0px {-(100 / 4) * i - 3}%"
-					class="transition-all ease-in-out duration-300 flex flex-col items-start"
+					class="transition-all ease-in-out duration-500 flex flex-col xs:items-start items-center"
 				>
 					{#each whatWeDo as t}
-						<span class="inline-block z-10 gradient" data-cursor-text="What We Do">{t}</span>
+						<span class="inline-block z-10 gradient text-center" data-cursor-text="What We Do"
+							>{t}</span
+						>
 						<!-- content here -->
 					{/each}
 				</div>

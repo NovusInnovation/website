@@ -13,6 +13,13 @@ const config = {
 				'2xl': '1400px'
 			}
 		},
+		screens: {
+			xs: '500px',
+			sm: '540px',
+			md: '720px',
+			lg: '920px',
+			xl: '1040px'
+		},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border) / <alpha-value>)',
