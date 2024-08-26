@@ -102,12 +102,12 @@
 			<span>{@html m.landing1()}</span>
 			<br class="hidden md:block" />
 			{@html m.landing2()}
+			<br class="xs:hidden" />
 			<span
 				class="inline-block overflow-y-clip translate-y-[20%] h-[1.1em] w-[15rem] text-left transition-all ease-in-out duration-1000"
 				id="whatWeDo"
 				style="overflow-inline: clip;"
 			>
-				<br class="xs:hidden" />
 				<div
 					style="translate: 0px {-(100 / 4) * i - 3}%"
 					class="transition-all ease-in-out duration-500 flex flex-col xs:items-start items-center"
@@ -132,6 +132,17 @@
 
 	.profile-bubble {
 		@apply absolute rounded-full backdrop-blur-[0.06em];
+		animation: anim 300ms ease-out;
+	}
+
+	@keyframes anim {
+		0% {
+			scale: 0;
+			transform-origin: center;
+		}
+		100% {
+			scale: 1;
+		}
 	}
 
 	.cont-3d {
