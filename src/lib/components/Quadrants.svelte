@@ -2,10 +2,31 @@
     import { onMount } from 'svelte';
   
     let localTime;
-    const timeZone = 'Europe/Copenhagen'; // Change this to your desired timezone
+    let usaTime;
+    let nzTime;
+    const timeZone = 'Europe/Copenhagen';
+    const timeZoneUsa = 'America/Denver';
+    const timeZoneNZ = 'Pacific/Auckland';
+
   
     function updateTime() {
       const now = new Date();
+      const optionsNZ = {
+
+        timeZone: timeZoneNZ,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+      }
+      const optionsUsa = {
+
+        timeZone: timeZoneUsa,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+        }  
       const options = {
         timeZone: timeZone,
         hour: '2-digit',
@@ -14,6 +35,8 @@
         hour12: false,
       };
       localTime = new Intl.DateTimeFormat('en-US', options).format(now);
+      usaTime = new Intl.DateTimeFormat('en-US', optionsUsa).format(now);
+      nzTime = new Intl.DateTimeFormat('en-US', optionsNZ).format(now);
     }
 
     
@@ -35,11 +58,11 @@
     }
   
     .quadrant {
-      border: 1px solid #ccc; /* Optional styling */
+      border: 1px solid #ccc; 
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2em; /* Adjust font size as needed */
+      font-size: 2em; 
     }
     .time {
     font-size: 3vh;
@@ -54,10 +77,10 @@
   </style>
   
   <div class="container">
-    <div class="quadrant">Jonathan
+    <div class="quadrant">Jonathan {usaTime}
 
     </div>
-    <div class="quadrant">Eliot</div>
+    <div class="quadrant">Eliot {nzTime}</div>
     <div class="quadrant"> Aron             {localTime}
     </div>
     <div class="quadrant">Johannes             {localTime}
