@@ -81,9 +81,9 @@
 
     </div>
     <div class="quadrant">Eliot {nzTime}</div>
-    <div class="quadrant"> Aron             {localTime}
+    <div class="quadrant"> Aron  {localTime}
     </div>
-    <div class="quadrant">Johannes             {localTime}
+    <div class="quadrant">Johannes {localTime}
     </div>
 
   </div>
